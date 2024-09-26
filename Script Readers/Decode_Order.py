@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 
 #Main() Checks to See what type of script you would Like to generate
 def main():
-    CodexName = 'HD_Full_Codex.txt'
+    CodexName = 'Codex\HD_Full_Codex.txt'
     CoImport = open(CodexName);
     lines = CoImport.readlines();
     Codex = []; CodexLine = [];
@@ -41,7 +41,7 @@ def main():
     #for line in TranslatedCodex:
         #print("Feature: " , line);
         
-    OpenFile = 'programinput.txt';
+    OpenFile = 'Scripts\87.txt';
     ImportF = open(OpenFile);
     lines = ImportF.readlines();
     CleanLines = [];
