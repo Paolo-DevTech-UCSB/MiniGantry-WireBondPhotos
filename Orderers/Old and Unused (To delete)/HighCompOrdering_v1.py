@@ -3,7 +3,7 @@
 This Orderer Functions Similarly to the others, It takes a list of X and Y values as points, 
 This List of Points is REORDERED and output into a separate text file.
 
- the reason it's called High Comp Ordering is becuase it has recursive methods (NOT GREAT RESULTS) (BEST LD5 ~ 6800)
+ the reason it's called High Comp Ordering is becuase it has recursive methods (NOT GREAT RESULTS)
 """
 
 import tkinter as tk
@@ -45,7 +45,7 @@ def pathlength():
     return length;
     
 def reorder():
-    importF = open('INPUT.txt');
+    importF = open('Coordinates\LD_Five.txt');
     flines = importF.readlines();
     v = len(flines); lz = 0;
     dismat = []; 
@@ -83,7 +83,6 @@ def reorder():
         for data in dismat:
             if data[0] < lowest:
                 lowest = data[0]; lx = data[1]; ly = data[2];
-        print(lowest)
         orderedmat.append([lowest, lx, ly]);
         
         #print(len(newflinesmat), len(flinesmat))
@@ -94,7 +93,7 @@ def reorder():
          
         #flinesmat = [];
         
-    #print(orderedmat);
+    print(orderedmat);
 
     writefile =  open("OUTPUT.txt", "w");
     x = 0; y = 0; pointnum = 0; 
@@ -169,7 +168,7 @@ def saveplot(filename):
     
     
 def checkref(*args):
-    saveplot('OUTPUT.txt')
+    saveplot('Coordinates\LD_Five.txt')
     path = pathlength();
     
     photo = PhotoImage(file = 'temp.png')

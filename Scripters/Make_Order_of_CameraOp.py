@@ -9,7 +9,7 @@ import os
 import numpy as np
 
 def main():
-    OpenFile = 'Orders\input.txt';
+    OpenFile = 'OUTPUT.txt';
     minigantryscript(OpenFile);
     
 ##dont forget to edit in the initialization manually, or code it

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 This Orderer MAKES RANDOM ORDERS (FOR FINDING AVERAGE PATHLENGTH)
-@author: hep
 """
 
 import tkinter as tk
@@ -28,78 +27,41 @@ report = tk.Frame()
 photobox = tk.Frame()
 
 def sweep():
-    n=80; g = 10000; pathlist = []; mat = [];
-    importF = open('INPUT.txt');
-    flines = importF.readlines();
-    v = len(flines); iD = 0;
-    for line in flines:
-        templ = line.split('\t');
-        x = float(templ[0]); y = float(templ[1]); 
-        mat.append([x,y,iD])
-        iD += 1;
-    
-    data = {1000:0, 900:0, 800:0, 700:0, 600:0, 500:0,
-            400:0, 300:0, 200:0, 100:0, 0:0};
-    
-    p25 = False; p50 = False; p75 = False;
+    n=80; g = 1000; pathlist = []
+    """entry2.delete(0, "end")
+    entry2.insert(0, 1)
+    entry.delete(0, "end")
+    entry.insert(0, 1)"""
+    #plt.axis()
+    data = {8000:0, 7750:0, 7500:0, 7250:0, 7000:0, 6750:0, 6500:0,
+            6250:0, 6000:0, 5750:0, 5500:0, 5250:0, 5000:0, 4750:0,
+            4500:0, 4250:0, 4000:0, 3750:0, 3500:0, 3250:0, 3000:0,
+            2750:0, 2500:0, 2250:0, 2000:0, 1750:0, 1500:0, 1250:0,
+            1000:0, 750:0, 500:0, 250:0, 0:0};
     for i in range(g):
+        pathlist = [];
         
-        #progress (:
-            
-        if i >= g/4 and p25 == False:
-            print("25% Done..")
-            p25 = True;
-        elif i >= g/2 and p50 == False:
-            print("50% Done..")
-            p50 = True;
-        elif i >= g*3/4 and p75 == False:
-            print("75% Done..")
-            p75 = True;
+        b = i;
+        while b >= 7:
+            b = b - 7;
+        if b == 0:              color='r'; 
+        elif b == 1:            color='orange';  
+        elif b == 2:            color='yellow'; 
+        elif b == 3:            color='green';  
+        elif b == 4:            color='blue';  
+        elif b == 5:            color='purple'; 
+        elif b == 6:            color='pink'; 
         
-        #checking first five points without writing to file 
-        
-        orderedpairs = [];
-        usedplaces = [];
-        for x in range(v):
-            goodrand = False;
-            while goodrand == False:
-                place = randrange(v);
-                if place in usedplaces:
-                    goodrand = False;
-                else: 
-                    orderedpairs.append([place,x]);
-                    usedplaces.append(place)
-                    goodrand = True;
-
-        orderedmat = [];
-        for pair in orderedpairs:
-            for point in mat:
-                if pair[0] == point[2]:
-                    orderedmat.append([point[0],point[1],pair[0]])
-        
-        x1 = orderedmat[0][0]; x2 = orderedmat[1][0];
-        x3 = orderedmat[2][0]; x4 = orderedmat[3][0];
-        x5 = orderedmat[4][0]; x6 = orderedmat[5][0];
-        y1 = orderedmat[0][1]; y2 = orderedmat[1][1];
-        y3 = orderedmat[2][1]; y4 = orderedmat[3][1];
-        y5 = orderedmat[4][1]; y6 = orderedmat[5][1];
-        fivepairs = [[x1,y1],[x2,y2],[x3,y3],[x4,y4],[x5,y5]]
-        
-        dis1 = np.sqrt((x1-x2)**2+(y1-y2)**2);
-        dis2 = np.sqrt((x2-x3)**2+(y2-y3)**2);
-        dis3 = np.sqrt((x3-x4)**2+(y3-y4)**2);
-        dis4 = np.sqrt((x4-x5)**2+(y4-y5)**2);
-        
-        total = dis1 + dis2 + dis3 + dis4;
-        if total <= 100:
-            key = 0;
-            while key < total:
-                key = key + 100;
-            val = data[key] + 1;
-            data[key] = val;
-            print(fivepairs)
-            
-            
+        pathlist;
+        reorder()
+        v = pathlength()
+        thousands = round(v/1000);
+        hundreds = round((v-thousands)/100);
+        key = 0; smaller = True;
+        while key < v:
+            key = key + 250;
+        val = data[key] + 1;
+        data[key] = val;
         
         
         #pathlist.append(round(v))
@@ -111,10 +73,10 @@ def sweep():
     fig = plt.figure() #figsize = (10, 5)
      
     # creating the bar plot
-    plt.bar(groups, values, color ='r', width = 100);
+    plt.bar(groups, values, color ='r', width = 250);
      
-    plt.xlabel("Pathlength")
-    plt.ylabel("Number of Rand() Paths")
+    plt.xlabel("")
+    plt.ylabel("Pathlength")
     plt.title("Distribution of Pathlengths in rand()")
     #plt.show()    
         
@@ -160,7 +122,6 @@ def getscore(x, y, line):
     #print(var1, var2)
     return (score);
 
-
 def pathlength():
     length = 0;
     importF = open('OUTPUT.txt');
@@ -176,9 +137,9 @@ def pathlength():
         length += dis; 
     #print(scorelist)
     return length;
-        
+    
 def reorder():
-    importF = open('INPUT.txt');
+    importF = open('Coordinates\LD_Five.txt');
     flines = importF.readlines();
     v = len(flines); iD = 0;
     mat = []; scorelist = []
@@ -214,8 +175,6 @@ def reorder():
         for point in mat:
             if pair[0] == point[2]:
                 orderedmat.append([point[0],point[1],pair[0]])
-    
-    
     
     writefile =  open("OUTPUT.txt", "w");
     x = 0; y = 0; pointnum = 0; 

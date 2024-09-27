@@ -27,7 +27,7 @@ report = tk.Frame()
 photobox = tk.Frame()
 
 def sweep():
-    n=80; g = 15; pathlist = []
+    n=80; g = 15; pathlist = []; smallestlist = []; sscores = [];
     entry2.delete(0, "end")
     entry2.insert(0, 1)
     entry.delete(0, "end")
@@ -54,19 +54,28 @@ def sweep():
                 
         for x in range(n):
             entry.delete(0,"end")
-            entry.insert(0, x+1)
+            entry.insert(0, x)
+            #entry.insert(0, x+1)
             reorder()
             v = pathlength()
-            pathlist.append([x,v])
+            #print(i, x, v)
+            if v < 1300:
+                
+                print("Bottom Row:",i,"Top Row:", x, v, entry.get(), entry2.get())
+                smallestlist.append([i, x, v])
+                #sscores.append(v)
+            pathlist.append([i,x,v])
         #print(pathlist);
 
         
 
         p1x = 0; p1y = 0; lowest = 1000000; lown = 0;
         for datum in pathlist:
-            if datum[1] < lowest:
-                lowest = datum[1]; lown = datum[0];
-            p2x = datum[0]; p2y = datum[1];
+            if datum[2] < lowest:
+                lowest = datum[2]; lown = datum[1];
+                #print(i, x, v)
+                
+            p2x = datum[1]; p2y = datum[2];
             x2 = [p1x,p2x]; y2 = [p1y,p2y]
             if x2 != [n-1, 0]:
 
@@ -74,13 +83,33 @@ def sweep():
                 
                 
             p1x = p2x; p1y = p2y; 
-        print(i, n, lown, lowest, b, color)
+    
+
+        #print(i, x, v)
+        #print(i, x, lown, lowest, b, color)
         #p1x = 0; p1y = 0;
         #plt.annotate('(%s,' %lowest, xy=(int(lown),int(lowest)), xytext=(int(lown),int(lowest)))
         #entry2.delete(0, "end")
         #entry2.insert(0, i+2)
         #plt.plot([lown,lown], [0, lowest], 'black');   
-        
+
+    for data in smallestlist:
+        entry.delete(0,"end")
+        entry.insert(0, data[0])
+        entry2.delete(0,"end")
+        entry2.insert(0, data[1])
+        reorder();
+        v = pathlength();
+        sscores.append(v)
+    print(sscores)
+    for data in smallestlist:
+        if data[2] is min(sscores):
+            print(data);
+            BESTentry.delete(0,"end")
+            BESTentry.insert(0, data[0])
+            BESTentry2.delete(0,"end")
+            BESTentry2.insert(0, data[1])
+    print("sweep is done.")
     plt.legend(['Sin Sector Algorithm'])
     plt.savefig('temp.png');
     
@@ -110,8 +139,11 @@ def getscore(x, y, line):
     
     #ang = (30*rot)/360;
     #X = x+(y*ang); Y = y-(x*ang);    
- 
-    var1 = int((X+50)/column);
+    
+    if column != 0:
+        var1 = int((X+50)/column);
+    else: 
+        var1 = int((X+50));
     if var1 % 2 == 0:  var2 = 1;
     else: var2 = -1;
 
@@ -137,12 +169,13 @@ def pathlength():
     return length;
     
 def reorder():
-    importF = open('Coordinates\LD_Right.txt');
+    importF = open('Coordinates\LD_Five.txt');
     flines = importF.readlines();
     v = len(flines); lz = 0;
-    mat = []; scorelist = []
+    mat = []; scorelist = [];
     scoretype = int(entry2.get());
-    
+    #scoretype = g;
+
     for line in flines:
         templ = line.split('\t');
         x = float(templ[0]); y = float(templ[1]);
@@ -277,9 +310,18 @@ def temp(*args):
     
 
 entry = tk.Entry(options, text="50")
-entry.grid(column=1, row=2)
+entry.grid(column=2, row=2)
+tk.Label(options, text="# of Collums: ").grid(column=1, row=2, sticky=W)
 entry2 = tk.Entry(options, text="10")
-entry2.grid(column=1, row=3)
+entry2.grid(column=2, row=3)
+tk.Label(options, text="Angle: ").grid(column=1, row=3, sticky=W)
+tk.Label(options, text="--").grid(column=3, row=2, sticky=W)
+tk.Label(options, text="--").grid(column=3, row=3, sticky=W)
+BESTentry = tk.Entry(options, text="5")
+BESTentry.grid(column=4, row=2)
+BESTentry2 = tk.Entry(options, text="6")
+BESTentry2.grid(column=4, row=3)
+#tk.Label(report, text="10: ").grid(column=1, row=2, sticky=W)
 tk.Button(checkbox, text="plot",command=checkref).grid(column=1, row=1, sticky=W)
 tk.Button(checkbox, text="reorder",command=reorder).grid(column=2, row=1, sticky=W)
 tk.Button(checkbox, text="sweep",command=sweep).grid(column=3, row=1, sticky=W)

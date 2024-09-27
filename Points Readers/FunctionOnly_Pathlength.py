@@ -7,7 +7,7 @@ import numpy as np
 
 def pathlength():
     length = 0;
-    importF = open('AletheasLD5.txt');
+    importF = open('OUTPUT.txt');
     flines = importF.readlines();
     #print(flines)
     v = len(flines); lz = 0;
