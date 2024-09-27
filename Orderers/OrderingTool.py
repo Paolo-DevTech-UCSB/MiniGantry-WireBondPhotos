@@ -137,7 +137,7 @@ def pathlength():
     return length;
     
 def reorder():
-    importF = open('INPUT.txt');
+    importF = open('Coordinates\LD_Right.txt');
     flines = importF.readlines();
     v = len(flines); lz = 0;
     mat = []; scorelist = []

@@ -9,7 +9,7 @@ import os
 import numpy as np
 
 def main():
-    OpenFile = 'AletheasLD5.txt';
+    OpenFile = 'Orders\input.txt';
     minigantryscript(OpenFile);
     
 ##dont forget to edit in the initialization manually, or code it
@@ -23,7 +23,7 @@ def minigantryscript(OpenFile):
     z = 0; z2 = 1;
     total = 0; p = 0; u = 0;
     
-    writefile =  open("programoutput.txt", "w");
+    writefile =  open("Scripts\programoutput.txt", "w");
 
     for line in flines:
 
