@@ -9,7 +9,11 @@ import os
 import numpy as np
 
 def main():
-    OpenFile = 'OUTPUT.txt';
+    path = os.getcwd();
+    path = path.replace('Scripters','')
+    OpenFile = path + 'Script Readers\\' + 'OUTPUT1.txt'
+    print(OpenFile);
+    #OpenFile = 'Script Readers\\OUTPUT1.txt';
     minigantryscript(OpenFile);
     
 ##dont forget to edit in the initialization manually, or code it
@@ -23,7 +27,10 @@ def minigantryscript(OpenFile):
     z = 0; z2 = 1;
     total = 0; p = 0; u = 0;
     
-    writefile =  open("Scripts\programoutput.txt", "w");
+    path = os.getcwd();
+    path = path.replace('Scripters','')
+    writeFilePath = path + "Scripts\programoutput.txt"
+    writefile =  open(writeFilePath, "w");
 
     for line in flines:
 
