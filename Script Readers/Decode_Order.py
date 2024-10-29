@@ -41,7 +41,7 @@ def main():
     #for line in TranslatedCodex:
         #print("Feature: " , line);
         
-    OpenFile = 'Scripts\87.txt';
+    OpenFile = 'Scripts\38.txt';
     ImportF = open(OpenFile);
     lines = ImportF.readlines();
     CleanLines = [];
