@@ -112,7 +112,7 @@ def Cells(length, Array):
         cell2 = Array[photo][6];
         cell3 = Array[photo][7];
         named = str(cell1) + "_" + str(cell2) + "_" + str(cell3)
-        dest = "/home/pi/Desktop/WireBondPhotos/" + named + ".png"
+        dest = "/home/hep/Desktop/WireBondPhotos/" + named + ".png"
         print("Destination:", dest)
         os.rename(source, dest)
     print("Cells Done") 
@@ -173,7 +173,7 @@ def init():
         NameEntry.insert(0, "ML51CX-SB###")
         
     elif ShapeEntry.get() == "LD Full":
-        openfile = 'LD_Five_Index.txt'
+        openfile = 'LD_Full_Index.txt'
         StatusEntry.delete(0, END)
         StatusEntry.insert(0, "Please Start Mini-Gantry Program #90")
         NameEntry.delete(0, END)
@@ -236,7 +236,7 @@ def init():
                 CellsEntry.insert(0, Array[PCount][5:8])  ##BUGFIX 1
                 
                 time. sleep(1.0) ###CHAGED TO SEE EFFECT WAS 1.6
-                os.system('scrot /home/pi/Desktop/WireBondPhotos/photo'+str(PCount)+'.png')
+                os.system('scrot /home/hep/Desktop/WireBondPhotos/photo'+str(PCount)+'.png')
                 Chk1 = False; Chk2 = False;
                 PCount += 1;
                 idlecycles = 0;
@@ -332,14 +332,14 @@ window.minsize(width=500, height=150)
 window.geometry("1600x1150")
 
 
-Upps = tk.Frame(padx = 535, pady = 20, bg = "darkblue")
-UR1 = tk.Frame()
+Upps = tk.Frame(padx = 535, pady = 20, bg = "#013660")
+UR1 = tk.Frame(padx = 25)
 MidR = tk.Frame()
 Mids = tk.Frame()
 
 #
 #tk.Frame.__init__(self, parent)
-vlc_frame = tk.Frame(window, width=1600, height = 940)
+vlc_frame = tk.Frame(window, width=1600, height = 900)
 #vlc_frame.grid(row=4, column=1)
 
 
@@ -359,8 +359,11 @@ def set_window_id():
 #player.play()
 window.after(100, set_window_id)
 
-label = tk.Label(Upps, text="Welcome to Wirebond Photos").pack()
-tk.Button(Upps, text="Basic Start", command=Sub).pack()
+label = tk.Label(UR1, text="Welcome to Wirebond Photos").grid(column=1, row=6, sticky=W)
+label = tk.Label(UR1, text="-By Paolo Jordano").grid(column=1, row=7, sticky=W)
+tk.Button(UR1, text="Basic Start", command=Sub).grid(column=1, row=5, sticky=W)
+#separator = tk.Canvas(Upps, width = 10, height = 80, bg='darkblue')
+#separator.grid(row=0, column=0, padx=10, pady=10)
 
 HoleNumEntry = tk.Entry(UR1, width = 35)
 HoleNumEntry.grid(row = 1, column =1)
@@ -390,7 +393,39 @@ tk.Button(Mids, text="LD Bottom", command=setBOTTOMPARTIAL).grid(row = 1, column
 tk.Button(Mids, text="HD Top", command=setTOPHD).grid(row = 1, column =9)
 tk.Button(Mids, text="LD Full", command=setFULLLD).grid(row = 1, column =10)
 
-Upps.grid(padx = 20, column=1, row=1, sticky=W)
+image_frame = tk.Frame(window, bg = '#013660')
+image_frame2 = tk.Frame(window, bg = '#013660')
+
+imagepath = "/home/hep/Desktop/SMALLERCERN.png"
+imagepath2 = "/home/hep/Desktop/SMALLERucsb.png"
+
+image = Image.open(imagepath)
+image2 = Image.open(imagepath2)
+
+resized_image = image.resize((150, 150))
+resized_image2 = image2.resize((375, 150))
+
+photo = ImageTk.PhotoImage(resized_image)
+photo2 = ImageTk.PhotoImage(resized_image2)
+
+image_label = tk.Label(Upps, image=photo)
+image_label.image = photo
+#image_label.grid(column=2, row=1, sticky=W)
+image_label.grid(column=4, row=1, sticky=W)
+
+image_label2 = tk.Label(Upps, image=photo2)
+image_label2.image = photo2
+#image_label2.grid(column=2, row=1, sticky=W)
+image_label2.grid(column=5, row=1, sticky=W)
+
+
+#image_frame.grid(column=3, row=1, sticky=W)
+#image_frame2.grid(column=3, row=1, sticky=W)
+
+Upps.grid(column=1, row=1, sticky=W)
+
+image_frame.grid(column=1, row=2, sticky=W)
+
 UR1.grid(column=1, row=1, sticky=W)
 MidR.grid(column=1, row=2, sticky=W)
 Mids.grid(column=1, row=3, sticky=W)
