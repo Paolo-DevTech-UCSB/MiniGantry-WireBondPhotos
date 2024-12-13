@@ -6,7 +6,8 @@
   # Rasberry Pi (3 or Higher) (With Rasbian)
   # Microscope Arm for Mini Gantry (Email, Susanne or Paolo from UCSB for STL or CAD file)
   # 25 Pin D-Sub Connector (male) (makes it easier to remove setup from minigantry) (bought at UCSB Physics's lab supply room)
-
+  # MicroSD Card Reader: For getting a fresh install of rasbian
+  
 #2 How to build (Hardware):
   # -1- Set Up your RasberryPI with the monitor and mouse/keyboard next to your minigantry. 
   # -2- Attach the microscope arm for the minigantry.
@@ -17,22 +18,30 @@
   # -7- Connect Relay's Negative output to RasberryPi's GPIO26 (Pin 27) (WIRE #4)
 
 #3 How to Install (Software): 
-  # Install Rasbian on Rasberry PI:
-  # Download or USB the GUI.py Code, Place on desktop. 
-  # Download Appropriate Indexs and Place on desktop.
-  # on Desktop create folder called 'WireBondPhotos'
-  # (if missing) pip install 'threading', 'vlc', 'tkinter'
+  #Start With a New Installation of Rasbian on Your RasberryPi, Old Versions are hard to fix, fresh os is best
+      -This is done by removing the SD Card, and reformatting it on a PC, then Using the Rasbian Install Tool, from thier website.
+  #Next, preparing a virtual environement on the raspberyPi. 
+      -Go Through OS setup steps
+      -Create a folder on the desktop named 'WBENV'
+      -Open Terminal and Type: sudo apt-get update
+      -and then: sudo apt-get upgrade
+      -and then: cd ~/Desktop
+      -After that: python3 -m venv WBENV  
+      -After that: source Desktop/WBENV/bin/activate
+      -After that: pip install pillow python-vlc pyautogui subprocess os RPi.GPIO 
+  #Next, the Installation
+      -Move onto the desktop: GUI.pi, The Indexs, StartWBPhotos.sh, and the two lab images
+      -In Terminal Type: chmod +x Desktop/StartWBPhotos.sh
+      This will allow you to start the program by typing this into a fresh terminal:
+        "Desktop/StartWBPhotos.sh"
+
 
 #4 How to run: 
-  # Right click on GUI.py and open in ThonnyIDE. 
-  # Click Run
-  # Select shape using buttons, then click basic start
-  # follow instructions on GUI, Start the Minigantry program that the GUI says is correct. 
-  # wait
-  # Move Picture to Desired Location & Clean up 'WireBondPhotos' folder
+    1. Open Terminal
+    2. Type Into Terminal: Desktop/StartWBPhotos.sh
 
-  
-
-
-
-
+        or
+         
+    1. Right Click on GUI.py
+    2. Click Thonny (if needed: change interpreter to desktop environment)
+    3. Press the Green Start Button
