@@ -8,9 +8,9 @@
   # 25 Pin D-Sub Connector (male) (makes it easier to remove setup from minigantry) (bought at UCSB Physics's lab supply room)
 
 #2 How to build (Hardware):
-  # -1- Set Up your RasberryPI with the Monitor and Mouse/Keyboard Next to you Minigantry. 
-  # -2- Attach the Microscope Arm for the Minigantry
-  # -3- Plug USB Microscope Into RasberryPI, (optional: place into Microscope Arm)
+  # -1- Set Up your RasberryPI with the monitor and mouse/keyboard next to your minigantry. 
+  # -2- Attach the microscope arm for the minigantry.
+  # -3- Plug USB microscope into RasberryPI. (optional: place into Microscope Arm)
   # -4- (Easier With 25 D-Sub Connector) Connect the MiniGantry's GPIO OUTPUT pin #8 to the negative channel on the input of the Relay.  (WIRE #1)
   # -5- (Easier With 25 D-Sub Connector) Connect the MiniGantry's GPIO 24V Power pin the to the Positive Channel on the input of the Relay. (WIRE #2)
   # -6- Connect Relay's Positive Output to 3V Power (Pin 1)  (WIRE #3)
@@ -23,7 +23,7 @@
   # on Desktop create folder called 'WireBondPhotos'
   # (if missing) pip install 'threading', 'vlc', 'tkinter'
 
-#4 how to run: 
+#4 How to run: 
   # Right click on GUI.py and open in ThonnyIDE. 
   # Click Run
   # Select shape using buttons, then click basic start
