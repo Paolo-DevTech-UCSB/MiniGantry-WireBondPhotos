@@ -30,7 +30,7 @@
       -After that: source Desktop/WBENV/bin/activate
       -After that: pip install pillow python-vlc pyautogui subprocess os RPi.GPIO 
   #Next, the Installation
-      -Move onto the desktop: GUI.pi, The Indexs, StartWBPhotos.sh, and the two lab images
+      -Move onto the desktop: (latest) GUI.pi, The Indexs, StartWBPhotos.sh, and the two lab images
       -In Terminal Type: chmod +x Desktop/StartWBPhotos.sh
       This will allow you to start the program by typing this into a fresh terminal:
         "Desktop/StartWBPhotos.sh"
@@ -42,6 +42,7 @@
 
         or
          
+    #HAS RAM ISSUES
     1. Right Click on GUI.py
     2. Click Thonny (if needed: change interpreter to desktop environment)
     3. Press the Green Start Button
