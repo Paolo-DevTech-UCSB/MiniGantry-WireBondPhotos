@@ -32,15 +32,17 @@ def minigantryscript(OpenFile):
             #print(linearray) 
 
         #print(line)
-    print(LineList)
+    #print(LineList)
     path = os.getcwd();
     path = path.replace('Scripters','')
     writeFilePath = path + '\\XML Resources\\Scripters\\' + 'Input.txt'
     writefile =  open(writeFilePath, "w");    
 
     for Array in LineList: 
-        print(Array[1] + Array[2])
+        #print(Array[1] + "\t" + Array[2]+ "\n")
+        print(Array[0] + ",")
         writefile.write(Array[1] + "\t" + Array[2]+ "\n")
+        #writefile.write(Array[0] + "\t" + Array[1] + "\t" + Array[2] + "\t" + Array[3]+ "\n")
 
 
 
