@@ -10,9 +10,8 @@ import numpy as np
 
 def main():
     path = os.getcwd();
-    #path = path.replace('Scripters','')
-    #OpenFile = path + '\\XML Resources\\Scripters\\OUTPUT.txt'
-    OpenFile = 'C:\\Users\\hep\\Documents\\Mini Gantry Stuff\\MiniGantry-WireBondPhotos\\XML Resources\\Scripters\\Input.txt'
+    path = path.replace('Scripters','')
+    OpenFile = path + 'Script Readers\\' + 'OUTPUT1.txt'
     print(OpenFile);
     #OpenFile = 'Script Readers\\OUTPUT1.txt';
     minigantryscript(OpenFile);
@@ -30,7 +29,7 @@ def minigantryscript(OpenFile):
     
     path = os.getcwd();
     path = path.replace('Scripters','')
-    writeFilePath = path + "\\XML Resources\\Scripters\\Output.txt"
+    writeFilePath = path + "Scripts\programoutput.txt"
     writefile =  open(writeFilePath, "w");
 
     for line in flines:
