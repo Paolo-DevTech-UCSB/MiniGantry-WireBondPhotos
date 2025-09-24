@@ -12,7 +12,8 @@ def main():
     path = os.getcwd();
     #path = path.replace('Scripters','')
     #OpenFile = path + '\\XML Resources\\Scripters\\OUTPUT.txt'
-    OpenFile = 'C:\\Users\\hep\\Documents\\Mini Gantry Stuff\\MiniGantry-WireBondPhotos\\XML Resources\\Scripters\\Input.txt'
+    #OpenFile = 'C:\\Users\\hep\\Documents\\Mini Gantry Stuff\\MiniGantry-WireBondPhotos\\XML Resources\\Scripters\\Input.txt'
+    OpenFile = 'c:\\Users\\hep\\Documents\\GitHub Forks\\MiniGantry-WireBondPhotos\\MiniGantry-WireBondPhotos\\MiniGantry-WireBondPhotos\\XML Resources\\Scripters\\Input.txt'
     print(OpenFile);
     #OpenFile = 'Script Readers\\OUTPUT1.txt';
     minigantryscript(OpenFile);
@@ -34,10 +35,12 @@ def minigantryscript(OpenFile):
     writefile =  open(writeFilePath, "w");
 
     for line in flines:
-
+        
         templ = line.split('\t');
         #print(templ);
         p1xi = templ[0];  p1yi = templ[1]; #beegh = templ[0];
+        print(p1xi, p1yi)
+
         if z2 == 1:
             writefile.write('<?xml version="1.0" encoding="utf-8"?>\n')
             writefile.write('<DTRobot>\n');
@@ -69,6 +72,7 @@ def minigantryscript(OpenFile):
         writefile.write('  <CommandInfo Index="'+ str(z2+2) + '" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>\n')
         writefile.write('  <CommandInfo Index="'+ str(z2+3) + '" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>"""\n')
         #print("og coords: " + str((p1xi)) + " , " + str((yvalue)))
+        #print("new coords: " + str((XWithOff)) + "," + str((YWithOff)))
         p = p + 1;
         z = z + 1;
         u = u + 4;
