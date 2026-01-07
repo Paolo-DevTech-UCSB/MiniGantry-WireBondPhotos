@@ -54,6 +54,7 @@ def windowmove():
     pyautogui.dragRel(500,400, duration  =1)
     
 def Sub(*args):
+    
     modname = NameEntry.get()
     informat = True;
     print(len(modname));
@@ -83,6 +84,8 @@ def Sub(*args):
         sub = threading.Thread(target = start_vlc)
         sub.daemon = True;
         sub.start()
+        
+        
         
         #StatusEntry.delete(0, END)
         #StatusEntry.insert(0, "VLC idle")
@@ -308,6 +311,19 @@ def init():
         StatusEntry.delete(0, END);
         StatusEntry.insert(0, "Finished...")
         
+        done = tk.Tk()
+        done.title("Process Finished...")
+        done.minsize(width=500, height=150)
+        done.geometry("1600x1150")
+        dl = tk.Label(done, text="Process Finished...", font=("Helvetica", 48))
+        dl.pack(expand=True)
+        
+        
+        
+        done.mainloop()
+        window.destroy()
+        
+        
 
 def shapeindx(letter):
     if letter == "R" or letter == "r":
@@ -403,9 +419,10 @@ Instance = vlc.Instance()
 player = Instance.media_player_new()
 
 # Set the media to play (replace with your media stream URL)
+
 media = Instance.media_new("v4l2://")
 player.set_media(media)
-
+    
 def set_window_id():
     player.set_xwindow(vlc_frame.winfo_id())
     player.play()

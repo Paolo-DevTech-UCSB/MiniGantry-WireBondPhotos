@@ -1,14 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This Code reads from a codex,
-this codex contains the location, names, and cells of all the stepped holes. 
-(WireBond Photo's takes pictures of these holes)
-
-The Point of this code is to used that Codex to OPEN and INTERPRET a Minigantry program, 
-And return all the points in the code, as well as the hole number and cells. 
-
-Becuase it take mini ganty code as an input, this is a good program for double checking a minigantry program,
-and cross refrencing it to the original data it was created from. 
+This Does Not Decode XML's
 """
 
 import os
@@ -19,7 +11,7 @@ import os
 def main():
     path = os.getcwd();
     path = path.replace('Script Readers','')
-    OpenFile = path + 'Scripts\\' + '38.xml'
+    OpenFile = path + '\XML Resources\Scripts\Double Signal Scrips\90.xml'
     print(OpenFile);
     
     #OpenFile = 'Scripts\87.txt';

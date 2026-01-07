@@ -7,36 +7,74 @@ import vlc
 
 import time
 
+import pyautogui
+import subprocess
+
 import os
-import RPi.GPIO as GPIO
+from gpiozero import DigitalInputDevice
+"import RPi.GPIO as GPIO"
+
+input_pin = DigitalInputDevice(26)
+input_pin.value
+
+#    GPIO.setmode(GPIO.BCM)
+#    GPIO.setup(26, GPIO.OUT)
+#  same as
+#	  
+#
+
+#chip = gpiod.Chip('gpiochip0')
+#line = chip.get_line(26)
+
+# 
+
+# line.request(consumer="my_app", type=gpiod.LINE_REQ_DIR_OUT)
+# line.setvalue(1) £ Sets GPIO 26 to HIGH
+#
+
 
 from PIL import Image, ImageTk
+
 
 def start_vlc(*args):
     #StatusEntry.delete(0,END)
     #StatusEntry.insert(0, "starting VLC")
     print("Thread:1  Start")
     #Controls for VLC
-    media_player = vlc.MediaPlayer()
-    media = vlc.Media("v4l2://")
-    media_player.set_media(media)
-    media_player.play()
-    media_player.toggle_fullscreen()
-    media_player.toggle_fullscreen()
+    #media_player = vlc.MediaPlayer()
+    #media = vlc.Media("v4l2://")
+    #media_player.set_media(media)
+    #media_player.play()
+    #media_player.toggle_fullscreen()
+    #media_player.toggle_fullscreen()
+    #media_player.video_set_scale(2)
 
+    time.sleep(1)
+    #windowmove()    
+    
     shape = ShapeEntry.get()
     seconds = shapetimeindx(shape)
-    time.sleep(seconds)
+    time.sleep(100000)
     
     StatusEntry.delete(0, END)
     StatusEntry.insert(0, "closing VLC")
     
-    media_player.stop()
+    #media_player.stop()
     
     StatusEntry.delete(0, END)
     StatusEntry.insert(0, "Idle")
     
+def windowmove():
+    pyautogui.moveTo(100,10)
+    pyautogui.click()
+    
+    time.sleep(0.5)
+    pyautogui.dragTo(100,100,duration=1)
+    pyautogui.moveTo(300,300)
+    pyautogui.dragRel(500,400, duration  =1)
+    
 def Sub(*args):
+    
     modname = NameEntry.get()
     informat = True;
     print(len(modname));
@@ -48,7 +86,7 @@ def Sub(*args):
             informat = False;
             print("#2")
     
-    if informat == False:  #if in-format is true the function is fine
+    if informat == False:  #if in-format is trueease to share the link which helped you the function is fine
         StatusEntry.delete(0,END)
         StatusEntry.insert(0, "Naming Error");
     else:
@@ -67,6 +105,8 @@ def Sub(*args):
         sub.daemon = True;
         sub.start()
         
+        
+        
         #StatusEntry.delete(0, END)
         #StatusEntry.insert(0, "VLC idle")
         
@@ -79,15 +119,40 @@ def Sub(*args):
     
 
 
-def Cells(length):
-    for photo in Range(length):
-        source = 'home/pi/Desktop/WireBondPhotos/photo'+str(photo)+'.png';
-        cells1 = 1; cells2 = 2; cells = photo;
-        named = "Hole_"+str(photo)+"_Cells_"+cells1+"_"+cells2+"_"+cells3;
+def Cells(length, Array):
+    """for photo in range(length):
+        source = "home/pi/Desktop/WireBondPhotos/photo" + str(photo) + ".png";
+        cells1 = Array[photo][5]; cells2 = Array[photo][6]; cells3 = Array[photo][7];
+        named = "Hole_" + str(photo) + "_Cells_" + str(cells1) + "_" + str(cells2) + "_" + str(cells3);
+        #named = "Hole_"+ photo +"_Cells_"+cells1+"_"+cells2+"_"+cells3;
+                
+        dest = '/home/pi/Desktop/WireBondPhotos/'+str(named)+'.png';
+        os.rename(source,dest)"""
         
-        dest = 'home/pi/Desktop/WireBondPhotos/'+str(named)+'.png';
-        os.rename(source,dest)
+    #for photo in range(length):
+    photo = 0; notdone = True;
+    while notdone == True:
+        if Array[photo][5] == 'notch':
+            notdone = False;
+        source = "/home/hep/Desktop/WireBondPhotos/photo" + str(photo) + ".png";
+        cell1 = Array[photo][5];
+        cell2 = Array[photo][6];
+        cell3 = Array[photo][7];
+        named = str(cell1) + "_" + str(cell2) + "_" + str(cell3) + ".png";
+        #dest = "/home/hep/Desktop/WireBondPhotos/" + named + ".png"
+        dest_directory = '/home/hep/Pictures/'
+        dest = os.path.join(dest_directory, named)
+        print("Destination:", dest)
+        try:
+            os.rename(source, dest)
+            print("Photo Moved")
+        except FileNotFoundError as e:
+            print(f'Error: {e}')
+        except PermisssionErrror as e:
+            print(f'permission error: {e}')
+        photo = photo + 1;
         
+    print('Done Moving Photos')
 
 """def Photos():
     GPIO.setup(26, GPIO.OUT)
@@ -116,8 +181,8 @@ def Cells(length):
     Cells(PCount);"""
     
 def init():
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(26, GPIO.OUT)
+    #GPIO.setmode(GPIO.BCM)
+    #GPIO.setup(26, GPIO.OUT)
     print("Starting Captures");
     
     StatusEntry.delete(0, END)
@@ -141,7 +206,16 @@ def init():
         StatusEntry.delete(0, END)
         StatusEntry.insert(0, "Please Start Mini-Gantry Program #73")
         NameEntry.delete(0, END)
-        NameEntry.insert(0, "ML51CX-SB###")    
+        NameEntry.insert(0, "ML51CX-SB###")
+        
+    elif ShapeEntry.get() == "LD Full":
+        openfile = 'LD_Full_Index.txt'
+        StatusEntry.delete(0, END)
+        StatusEntry.insert(0, "Please Start Mini-Gantry Program #90")
+        NameEntry.delete(0, END)
+        NameEntry.insert(0, "MLF1CX-SB###")    
+        
+
         
         
     else:
@@ -162,7 +236,9 @@ def init():
     state = False;  contin = False;
     while endprocess == False:
         LastState = state;
-        state = GPIO.input(26);
+        #input_pin = DigitalInputDevice(26)
+        state = input_pin.value;
+
         if LastState != state:
             counter = 0;
             print("reset");
@@ -177,14 +253,28 @@ def init():
         time.sleep(2)
     #GPIO.cleanup()
     if contin:
-        PhoNum = 331;  PCount = 0; Chk1 = False; Chk2 = False;
+        PhoNum = 331;  PCount = 0; Chk1 = False; Chk2 = False; idlecycles = 0; tot = 0;
         while PCount < 331:
             time.sleep(0.1)
-            state = GPIO.input(26);
-            if state: Chk1 = True; 
+            #state = GPIO.input(26);
+            #line.request(consumer="my_app", type=gpiod.LINE_REQ_DIR_IN)
+            #input_pin = DigitalInputDevice(26)
+            state = input_pin.value;
+            if state: print(1)
+            else: print(0);
+            if state: Chk1 = True;
             else: Chk2 = True; Chk1 = False;
             if Chk1 and Chk2:
-                #print("take a photo, Number:" + str(PCount));
+                #first_on = False;
+                #while first_on == False:
+                #    state = GPIO.input(26); 
+                #    if state == 1:
+                #        first_on == True;
+                    
+                    
+                #print('startpic')
+                #print(PCount)
+                print("take a photo, Number:" + str(PCount));
                 StatusEntry.delete(0, END)
                 StatusEntry.insert(0, "Running Photos...")
             
@@ -195,13 +285,66 @@ def init():
                 
                 
                 CellsEntry.delete(0, END)
-                CellsEntry.insert(0, Array[PCount][5:7])  ##BUGFIX 1
+                CellsEntry.insert(0, Array[PCount][5:8])  ##BUGFIX 1
                 
-                time. sleep(0.5) ###CHAGED TO SEE EFFECT WAS 1.6
-                os.system('scrot /home/pi/Desktop/WireBondPhotos/photo'+str(PCount)+'.png')
+                time. sleep(1.0) ###CHAGED TO SEE EFFECT WAS 1.6
+                #os.system('gnome-screenshot -f /home/hep/Desktop/WireBondPhotos/photo'+str(PCount)+'.png')
+                #screenshot = pyautogui.screenshot()
+                save_location = ' /home/hep/Desktop/WireBondPhotos/'
+                filename = 'photo'+str(PCount)+'.png'
+                filepath = save_location + filename;
+                tot = tot + 1;
+                idlecycles = 0;
+                
+                cmd = str('grim' + filepath)
+                os.system(cmd)
+                print('taken')
                 Chk1 = False; Chk2 = False;
                 PCount += 1;
-        Cells(PCount);
+                idlecycles = 0;
+                #donezo = False;
+                #while donezo == False:
+                #    state = GPIO.input(26);
+                #    if state == 0:
+                #        time.sleep(0.05)
+                #        donezo = True;
+                #    else: donezo = True;
+                #    
+                #    print('finished loop')
+                
+            else:
+                idlecycles = idlecycles + 1;
+            if idlecycles >= 1000:
+                Total = PCount;
+                PCount = 50000;
+                print(f'idle cycles: {idlecycles}')
+                StatusEntry.delete(0, END)
+                StatusEntry.insert(0, "Ended: Inactivty")
+                    
+            #if idlecycles >= 300:
+                #PCount = 100000;
+
+        
+        #Turned OFF WHILE FIXING SCROT
+        
+        CellsEntry.delete(0, END);
+        HoleNumEntry.delete(0, END);
+        StatusEntry.delete(0, END);
+        StatusEntry.insert(0, "Finished...")
+        Cells(tot, Array);
+        
+        done = tk.Tk()
+        done.title("Process Finished...")
+        done.minsize(width=500, height=150)
+        done.geometry("1600x1150")
+        dl = tk.Label(done, text="Process Finished...", font=("Helvetica", 48))
+        dl.pack(expand=True)
+        
+        
+        
+        done.mainloop()
+        window.destroy()
+        
         
 
 def shapeindx(letter):
@@ -262,6 +405,8 @@ def setBOTTOMPARTIAL():
 def setFULLLD():
     ShapeEntry.delete(0, END)
     ShapeEntry.insert(0, "LD Full")
+    NameEntry.delete(0, END)
+    NameEntry.insert(0, "MLF1CX-SB###")
         
 def setTOPHD():
     ShapeEntry.delete(0, END)
@@ -273,10 +418,6 @@ def setFULLHD():
     NameEntry.delete(0, END)
     NameEntry.insert(0, "MHF1CX-SB###")
     
-    
-
-    
-    
 
 window = tk.Tk()
 window.title("WB Photos")
@@ -284,13 +425,39 @@ window.minsize(width=500, height=150)
 window.geometry("1600x1150")
 
 
-Upps = tk.Frame(padx = 535, pady = 20, bg = "darkblue")
-UR1 = tk.Frame()
+Upps = tk.Frame(padx = 535, pady = 20, bg = "#013660")
+UR1 = tk.Frame(padx = 25)
 MidR = tk.Frame()
 Mids = tk.Frame()
 
-label = tk.Label(Upps, text="Welcome to Wirebond Photos").pack()
-tk.Button(Upps, text="Basic Start", command=Sub).pack()
+#
+#tk.Frame.__init__(self, parent)
+vlc_frame = tk.Frame(window, width=1600, height = 900)
+#vlc_frame.grid(row=4, column=1)
+
+
+# Create VLC player instance
+Instance = vlc.Instance()
+player = Instance.media_player_new()
+
+# Set the media to play (replace with your media stream URL)
+
+media = Instance.media_new("v4l2://")
+player.set_media(media)
+    
+def set_window_id():
+    player.set_xwindow(vlc_frame.winfo_id())
+    player.play()
+
+# Play the media
+#player.play()
+window.after(100, set_window_id)
+
+label = tk.Label(UR1, text="Wirebond Photos Jan 2025").grid(column=1, row=6, sticky=W)
+label = tk.Label(UR1, text="Author: Paolo Jordano").grid(column=1, row=7, sticky=W)
+tk.Button(UR1, text="Basic Start", command=Sub).grid(column=1, row=5, sticky=W)
+#separator = tk.Canvas(Upps, width = 10, height = 80, bg='darkblue')
+#separator.grid(row=0, column=0, padx=10, pady=10)
 
 HoleNumEntry = tk.Entry(UR1, width = 35)
 HoleNumEntry.grid(row = 1, column =1)
@@ -320,10 +487,44 @@ tk.Button(Mids, text="LD Bottom", command=setBOTTOMPARTIAL).grid(row = 1, column
 tk.Button(Mids, text="HD Top", command=setTOPHD).grid(row = 1, column =9)
 tk.Button(Mids, text="LD Full", command=setFULLLD).grid(row = 1, column =10)
 
-Upps.grid(padx = 20, column=1, row=1, sticky=W)
-UR1.grid(column=2, row=1, sticky=W)
-MidR.grid(column=2, row=2, sticky=W)
+image_frame = tk.Frame(window, bg = '#013660')
+image_frame2 = tk.Frame(window, bg = '#013660')
+
+imagepath = "/home/hep/Desktop/SMALLERCERN.png"
+imagepath2 = "/home/hep/Desktop/SMALLERucsb.png"
+
+image = Image.open(imagepath)
+image2 = Image.open(imagepath2)
+
+resized_image = image.resize((150, 150))
+resized_image2 = image2.resize((375, 150))
+
+photo = ImageTk.PhotoImage(resized_image)
+photo2 = ImageTk.PhotoImage(resized_image2)
+
+image_label = tk.Label(Upps, image=photo)
+image_label.image = photo
+#image_label.grid(column=2, row=1, sticky=W)
+image_label.grid(column=4, row=1, sticky=W)
+
+image_label2 = tk.Label(Upps, image=photo2)
+image_label2.image = photo2
+#image_label2.grid(column=2, row=1, sticky=W)
+image_label2.grid(column=5, row=1, sticky=W)
+
+
+#image_frame.grid(column=3, row=1, sticky=W)
+#image_frame2.grid(column=3, row=1, sticky=W)
+
+Upps.grid(column=1, row=1, sticky=W)
+
+image_frame.grid(column=1, row=2, sticky=W)
+
+UR1.grid(column=1, row=1, sticky=W)
+MidR.grid(column=1, row=2, sticky=W)
 Mids.grid(column=1, row=3, sticky=W)
+
+vlc_frame.grid(column=1, row=4, sticky=W)
 
 StatusEntry.insert(0, "Idle")
 NameEntry.insert(0, "MHF1CX-SB0001")

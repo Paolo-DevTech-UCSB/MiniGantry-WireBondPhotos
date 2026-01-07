@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DTRobot>
+  <ProgramParameterInfo ProgramNumber="24" ProgramName="LDTOP_WBPhotos" XYMoveSpeed="350" ZMoveSpeed="120" DeBugSpeed="10" BackHome="False" SoftX="0" SoftY="0" SoftZ="0" SoftU="0" SoftV="0" SoftW="0" AdjustX="0" AdjustY="0" AdjustZ="0" AutoPurgeTime="0" AutoPurgeWaitTime="0" TempCommand1="0" TempCommand2="0" TempX1="0" TempY1="0" TempZ1="0" TempX2="0" TempY2="0" TempZ2="0" ZLimit="100" EMG="False" Quickstep="False" QuickstepType="Normal" DefaultLIO="0" Password="" Lock="False" Beep="True" DisplayRunCount="True" DefineRunCount="0" RunCount="0" PausePosition="Stand" RunnProgramNumbers="24" IsRecordPick="True" PickIndex="1" StepsIndex="" IsRecordStep="False" TipFinderType="1" TipFinderLoop="1" TipFinderAction="2" TipFinderCenterX="0" TipFinderCenterY="0" TipFinderCenterZ="0" TipFinderStandardX="0" TipFinderStandardY="0" TipFinderStandardZ="0" />"""
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  """
+  <CommandInfo Index="1" Function="Line_Speed" Values="45,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="2" Function="Point_Dispense_Setup" Values="0.9,0.4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="3" Function="Dispense_End_Setup" Values="15,20,10,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="4" Function="Z_Clearance" Values="1,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="5" Function="Dummy_Point" Values="0,50.647,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="6" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="7" Function="Wait_Point" Values="10,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="8" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="9" Function="Dummy_Point" Values="24.02,294.39,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="11" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="12" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="13" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="18" Function="Dummy_Point" Values="28.08,303.71,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="20" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="21" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="22" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="27" Function="Dummy_Point" Values="40.16,303.71,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="29" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="30" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="31" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="36" Function="Dummy_Point" Values="58.29,300.22,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="38" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="39" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="40" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="45" Function="Dummy_Point" Values="70.37,306.7,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="47" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="48" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="49" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="54" Function="Dummy_Point" Values="76.42,303.71,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="56" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="57" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="58" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="63" Function="Dummy_Point" Values="94.54,300.22,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="65" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="66" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="67" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="72" Function="Dummy_Point" Values="100.58,311.78,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="74" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="75" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="76" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="81" Function="Dummy_Point" Values="108,311.78,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="83" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="84" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="85" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="90" Function="Dummy_Point" Values="124.75,303.71,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="92" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="93" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="94" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="99" Function="Dummy_Point" Values="136.79,303.71,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="101" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="102" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="103" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="108" Function="Dummy_Point" Values="148.82,303.71,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="110" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="111" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="112" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="117" Function="Dummy_Point" Values="160.85,303.71,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="119" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="120" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="121" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="126" Function="Dummy_Point" Values="184.97,303.71,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="128" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="129" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="130" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="135" Function="Dummy_Point" Values="172.94,289.76,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="137" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="138" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="139" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="144" Function="Dummy_Point" Values="160.9,289.76,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="146" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="147" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="148" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="153" Function="Dummy_Point" Values="148.77,289.76,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="155" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="156" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="157" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="162" Function="Dummy_Point" Values="136.704,282.78,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="164" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="165" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="166" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="171" Function="Dummy_Point" Values="130.79,286.77,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="173" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="174" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="175" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="180" Function="Dummy_Point" Values="118.71,293.24,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="182" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="183" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="184" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="189" Function="Dummy_Point" Values="118.71,272.31,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="191" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="192" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="193" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="198" Function="Dummy_Point" Values="112.67,282.78,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="200" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="201" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="202" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="207" Function="Dummy_Point" Values="100.58,289.76,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="209" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="210" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="211" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="216" Function="Dummy_Point" Values="88.5,282.78,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="218" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="219" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="220" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="225" Function="Dummy_Point" Values="76.42,282.78,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="227" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="228" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="229" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="234" Function="Dummy_Point" Values="58.29,279.29,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="236" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="237" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="238" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="243" Function="Dummy_Point" Values="40.16,282.78,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="245" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="246" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="247" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="252" Function="Dummy_Point" Values="46.21,272.31,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="254" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="255" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="256" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="261" Function="Dummy_Point" Values="52.25,268.83,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="263" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="264" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="265" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="270" Function="Dummy_Point" Values="70.37,258.36,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="272" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="273" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="274" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="279" Function="Dummy_Point" Values="82.46,258.36,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="281" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="282" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="283" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="288" Function="Dummy_Point" Values="94.54,272.31,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="290" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="291" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="292" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="297" Function="Dummy_Point" Values="100.58,261.85,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="299" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="300" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="301" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="306" Function="Dummy_Point" Values="112.57,261.85,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="308" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="309" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="310" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="315" Function="Dummy_Point" Values="118.5,271.721,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="317" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="318" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="319" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="324" Function="Dummy_Point" Values="148.72,261.85,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="326" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="327" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="328" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="333" Function="Dummy_Point" Values="148.72,268.83,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="335" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="336" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="337" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="342" Function="Dummy_Point" Values="166.65,272.31,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="344" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="345" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="346" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="351" Function="Dummy_Point" Values="160.7,261.85,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="353" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="354" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="355" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="360" Function="Dummy_Point" Values="164.446,252.247,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="362" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="363" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="364" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="369" Function="Dummy_Point" Values="148.67,247.9,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="371" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="372" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="373" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="378" Function="Dummy_Point" Values="130.59,251.38,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="380" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="381" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="382" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="387" Function="Dummy_Point" Values="124.5,247.9,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="389" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="390" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="391" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="396" Function="Dummy_Point" Values="100.33,247.9,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="398" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="399" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="400" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="405" Function="Dummy_Point" Values="94.34,244.91,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="407" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="408" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="409" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="414" Function="Dummy_Point" Values="58.24,251.38,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="416" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="417" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="418" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="423" Function="Dummy_Point" Values="64.23,240.92,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="425" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="426" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="427" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="432" Function="Dummy_Point" Values="82.31,237.43,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="434" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="435" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="436" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="441" Function="Dummy_Point" Values="94.34,237.43,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="443" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="444" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="445" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="450" Function="Dummy_Point" Values="112.47,240.92,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="452" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="453" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="454" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="459" Function="Dummy_Point" Values="118.51,237.43,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="461" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="462" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="463" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="468" Function="Dummy_Point" Values="124.395,232.59,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="470" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="471" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="472" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="477" Function="Dummy_Point" Values="142.63,237.43,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="479" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="480" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="481" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="486" Function="Dummy_Point" Values="15.271,308.412,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="488" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="489" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="490" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="495" Function="Dummy_Point" Values="13.78,308.48,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="497" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="498" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="499" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="504" Function="Dummy_Point" Values="56.096,237.237,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="506" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="507" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="508" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="513" Function="Dummy_Point" Values="55.29,236.33,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="515" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="516" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="517" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="522" Function="Dummy_Point" Values="197.663,307.855,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="524" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="525" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="526" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="531" Function="Dummy_Point" Values="198.726,307.855,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="533" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="534" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="535" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="540" Function="Dummy_Point" Values="156.62,237.137,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="542" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="543" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="544" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="549" Function="Dummy_Point" Values="157.383,236.229,41.14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="551" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="552" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="553" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="558" Function="Dummy_Point" Values="63.49,13.43,1.35,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="559" Function="Wait_Point" Values="2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+<CommandInfo Index="560" Function="End_Program" Values="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+</DTRobot>

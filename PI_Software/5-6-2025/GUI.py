@@ -11,7 +11,27 @@ import pyautogui
 import subprocess
 
 import os
-import RPi.GPIO as GPIO
+from gpiozero import DigitalInputDevice
+"import RPi.GPIO as GPIO"
+
+input_pin = DigitalInputDevice(26)
+input_pin.value
+
+#    GPIO.setmode(GPIO.BCM)
+#    GPIO.setup(26, GPIO.OUT)
+#  same as
+#	  
+#
+
+#chip = gpiod.Chip('gpiochip0')
+#line = chip.get_line(26)
+
+# 
+
+# line.request(consumer="my_app", type=gpiod.LINE_REQ_DIR_OUT)
+# line.setvalue(1) £ Sets GPIO 26 to HIGH
+#
+
 
 from PIL import Image, ImageTk
 
@@ -54,6 +74,7 @@ def windowmove():
     pyautogui.dragRel(500,400, duration  =1)
     
 def Sub(*args):
+    
     modname = NameEntry.get()
     informat = True;
     print(len(modname));
@@ -65,7 +86,7 @@ def Sub(*args):
             informat = False;
             print("#2")
     
-    if informat == False:  #if in-format is true the function is fine
+    if informat == False:  #if in-format is trueease to share the link which helped you the function is fine
         StatusEntry.delete(0,END)
         StatusEntry.insert(0, "Naming Error");
     else:
@@ -83,6 +104,8 @@ def Sub(*args):
         sub = threading.Thread(target = start_vlc)
         sub.daemon = True;
         sub.start()
+        
+        
         
         #StatusEntry.delete(0, END)
         #StatusEntry.insert(0, "VLC idle")
@@ -106,18 +129,30 @@ def Cells(length, Array):
         dest = '/home/pi/Desktop/WireBondPhotos/'+str(named)+'.png';
         os.rename(source,dest)"""
         
-    for photo in range(length):
-        source = "/home/pi/Desktop/WireBondPhotos/photo" + str(photo) + ".png";
+    #for photo in range(length):
+    photo = 0; notdone = True;
+    while notdone == True:
+        if Array[photo][5] == 'notch':
+            notdone = False;
+        source = "/home/hep/Desktop/WireBondPhotos/photo" + str(photo) + ".png";
         cell1 = Array[photo][5];
         cell2 = Array[photo][6];
         cell3 = Array[photo][7];
-        named = str(cell1) + "_" + str(cell2) + "_" + str(cell3)
+        named = str(cell1) + "_" + str(cell2) + "_" + str(cell3) + ".png";
         #dest = "/home/hep/Desktop/WireBondPhotos/" + named + ".png"
-        dest = "/home/hep/Desktop/Pictures/" + named + ".png"
+        dest_directory = '/home/hep/Pictures/'
+        dest = os.path.join(dest_directory, named)
         print("Destination:", dest)
-        os.rename(source, dest)
-    print("Cells Done") 
+        try:
+            os.rename(source, dest)
+            print("Photo Moved")
+        except FileNotFoundError as e:
+            print(f'Error: {e}')
+        except PermisssionErrror as e:
+            print(f'permission error: {e}')
+        photo = photo + 1;
         
+    print('Done Moving Photos')
 
 """def Photos():
     GPIO.setup(26, GPIO.OUT)
@@ -146,8 +181,8 @@ def Cells(length, Array):
     Cells(PCount);"""
     
 def init():
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(26, GPIO.OUT)
+    #GPIO.setmode(GPIO.BCM)
+    #GPIO.setup(26, GPIO.OUT)
     print("Starting Captures");
     
     StatusEntry.delete(0, END)
@@ -201,7 +236,9 @@ def init():
     state = False;  contin = False;
     while endprocess == False:
         LastState = state;
-        state = GPIO.input(26);
+        #input_pin = DigitalInputDevice(26)
+        state = input_pin.value;
+
         if LastState != state:
             counter = 0;
             print("reset");
@@ -216,10 +253,13 @@ def init():
         time.sleep(2)
     #GPIO.cleanup()
     if contin:
-        PhoNum = 331;  PCount = 0; Chk1 = False; Chk2 = False; idlecycles = 0;
+        PhoNum = 331;  PCount = 0; Chk1 = False; Chk2 = False; idlecycles = 0; tot = 0;
         while PCount < 331:
             time.sleep(0.1)
-            state = GPIO.input(26);
+            #state = GPIO.input(26);
+            #line.request(consumer="my_app", type=gpiod.LINE_REQ_DIR_IN)
+            #input_pin = DigitalInputDevice(26)
+            state = input_pin.value;
             print(state);
             if state == 1:
                 #first_on = False;
@@ -250,17 +290,22 @@ def init():
                 save_location = ' /home/hep/Desktop/WireBondPhotos/'
                 filename = 'photo'+str(PCount)+'.png'
                 filepath = save_location + filename;
+                tot = tot + 1;
+                idlecycles = 0;
                 
                 cmd = str('grim' + filepath)
                 os.system(cmd)
                 print('taken')
                 
                 while state == 1:
-                    state = GPIO.input(26)
+                    #state = GPIO.input(26);
+                    #line.request(consumer="my_app", type=gpiod.LINE_REQ_DIR_IN)
+                    #input_pin = DigitalInputDevice(26)
+                    state = input_pin.value;
                     if state == 0:
                         break
-                    else: print(state)
-                    time.sleep(0.1);
+                    else: #print(state)
+                        time.sleep(0.1);
                 #print(cmd)
                 #subprocess.run[(cmd)]
                 
@@ -281,16 +326,31 @@ def init():
                 
             else:
                 idlecycles = idlecycles + 1;
-            if idlecycles >= 100:
-                Total = PCount;
+                if idlecycles == 50 or idlecycles == 25:
+                    print(f'idle cycles: {idlecycles}')
+            if idlecycles >= 300:
+                PCount = 100000;
 
-        #Cells(Total, Array);
+        Cells(tot, Array);
         #Turned OFF WHILE FIXING SCROT
         
         CellsEntry.delete(0, END);
         HoleNumEntry.delete(0, END);
         StatusEntry.delete(0, END);
         StatusEntry.insert(0, "Finished...")
+        
+        done = tk.Tk()
+        done.title("Process Finished...")
+        done.minsize(width=500, height=150)
+        done.geometry("1600x1150")
+        dl = tk.Label(done, text="Process Finished...", font=("Helvetica", 48))
+        dl.pack(expand=True)
+        
+        
+        
+        done.mainloop()
+        window.destroy()
+        
         
 
 def shapeindx(letter):
@@ -387,9 +447,10 @@ Instance = vlc.Instance()
 player = Instance.media_player_new()
 
 # Set the media to play (replace with your media stream URL)
+
 media = Instance.media_new("v4l2://")
 player.set_media(media)
-
+    
 def set_window_id():
     player.set_xwindow(vlc_frame.winfo_id())
     player.play()
@@ -398,8 +459,8 @@ def set_window_id():
 #player.play()
 window.after(100, set_window_id)
 
-label = tk.Label(UR1, text="Welcome to Wirebond Photos").grid(column=1, row=6, sticky=W)
-label = tk.Label(UR1, text="-By Paolo Jordano").grid(column=1, row=7, sticky=W)
+label = tk.Label(UR1, text="Wirebond Photos Jan 2025").grid(column=1, row=6, sticky=W)
+label = tk.Label(UR1, text="Author: Paolo Jordano").grid(column=1, row=7, sticky=W)
 tk.Button(UR1, text="Basic Start", command=Sub).grid(column=1, row=5, sticky=W)
 #separator = tk.Canvas(Upps, width = 10, height = 80, bg='darkblue')
 #separator.grid(row=0, column=0, padx=10, pady=10)

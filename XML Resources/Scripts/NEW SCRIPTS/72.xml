@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <DTRobot>
-<ProgramParameterInfo ProgramNumber="72" ProgramName="WBPhotosLDR" XYMoveSpeed="350" ZMoveSpeed="120" DeBugSpeed="10" BackHome="False" SoftX="0" SoftY="0" SoftZ="0" SoftU="0" SoftV="0" SoftW="0" AdjustX="0" AdjustY="0" AdjustZ="0" AutoPurgeTime="0" AutoPurgeWaitTime="0" TempCommand1="0" TempCommand2="0" TempX1="0" TempY1="0" TempZ1="0" TempX2="0" TempY2="0" TempZ2="0" ZLimit="100" EMG="False" Quickstep="False" QuickstepType="Normal" DefaultLIO="0" Password="" Lock="False" Beep="True" DisplayRunCount="True" DefineRunCount="0" RunCount="0" PausePosition="Stand" RunnProgramNumbers="72" IsRecordPick="True" PickIndex="1" StepsIndex="" IsRecordStep="False" TipFinderType="1" TipFinderLoop="1" TipFinderAction="2" TipFinderCenterX="0" TipFinderCenterY="0" TipFinderCenterZ="0" TipFinderStandardX="0" TipFinderStandardY="0" TipFinderStandardZ="0" />
+<ProgramParameterInfo ProgramNumber="72" ProgramName="LDRIGHTWBPHOTO" XYMoveSpeed="350" ZMoveSpeed="120" DeBugSpeed="10" BackHome="False" SoftX="0" SoftY="0" SoftZ="0" SoftU="0" SoftV="0" SoftW="0" AdjustX="0" AdjustY="0" AdjustZ="0" AutoPurgeTime="0" AutoPurgeWaitTime="0" TempCommand1="0" TempCommand2="0" TempX1="0" TempY1="0" TempZ1="0" TempX2="0" TempY2="0" TempZ2="0" ZLimit="100" EMG="False" Quickstep="False" QuickstepType="Normal" DefaultLIO="0" Password="" Lock="False" Beep="True" DisplayRunCount="True" DefineRunCount="0" RunCount="0" PausePosition="Stand" RunnProgramNumbers="72" IsRecordPick="True" PickIndex="1" StepsIndex="" IsRecordStep="False" TipFinderType="1" TipFinderLoop="1" TipFinderAction="2" TipFinderCenterX="0" TipFinderCenterY="0" TipFinderCenterZ="0" TipFinderStandardX="0" TipFinderStandardY="0" TipFinderStandardZ="0" />
   <CommandInfo Index="1" Function="Line_Speed" Values="45,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
   <CommandInfo Index="2" Function="Point_Dispense_Setup" Values="0.9,0.4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
   <CommandInfo Index="3" Function="Dispense_End_Setup" Values="15,20,10,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
@@ -22,7 +21,7 @@
   <CommandInfo Index="18" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>"""
   <CommandInfo Index="19" Function="Wait_Point" Values="1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
   <CommandInfo Index="20" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
-  <CommandInfo Index="21" Function="Wait_Point" Values="10,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
+  <CommandInfo Index="21" Function="Wait_Point" Values="1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
   <CommandInfo Index="22" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
   <CommandInfo Index="23" Function="Dummy_Point" Values="188.42,385.27,40.51,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
   <CommandInfo Index="24" Function="Wait_Point" Values="3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
@@ -537,7 +536,16 @@
   <CommandInfo Index="533" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
   <CommandInfo Index="534" Function="Wait_Point" Values="1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
   <CommandInfo Index="535" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
-  <CommandInfo Index="536" Function="Dummy_Point" Values="194.27,0.2,0.72,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
-  <CommandInfo Index="537" Function="Wait_Point" Values="1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
-  <CommandInfo Index="538" Function="End_Program" Values="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+  <CommandInfo Index="536" Function="Dummy_Point" Values="194.27,0.2,40.51,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+  <CommandInfo Index="537" Function="Wait_Point" Values="3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
+  <CommandInfo Index="538" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
+  <CommandInfo Index="539" Function="Wait_Point" Values="1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
+  <CommandInfo Index="540" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>"""
+  <CommandInfo Index="541" Function="Wait_Point" Values="1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
+  <CommandInfo Index="542" Function="Set_IO" Values="2,8,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
+  <CommandInfo Index="543" Function="Wait_Point" Values="1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
+  <CommandInfo Index="544" Function="Set_IO" Values="2,8,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues=""/>
+  <CommandInfo Index="545" Function="Dummy_Point" Values="194.27,0.2,0.72,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+  <CommandInfo Index="546" Function="Wait_Point" Values="1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
+  <CommandInfo Index="547" Function="End_Program" Values="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />
 </DTRobot>
