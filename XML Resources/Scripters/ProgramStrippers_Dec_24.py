@@ -10,7 +10,7 @@ import numpy as np
 def main():
     path = os.getcwd();
     path = path.replace('Scripters','')
-    OpenFile = path + '\\XML Resources\\Scripters\\' + 'CurrentXML.txt'
+    OpenFile = path + '\\\XML Resources\\Scripters\\' + 'CurrentXML.txt'
     print(OpenFile);
     #OpenFile = 'Script Readers\\CurrentXML.txt';
     minigantryscript(OpenFile);
@@ -21,6 +21,7 @@ def minigantryscript(OpenFile):
     flines = importF.readlines();
     for line in flines:
         if 'Dummy_Point' in line:
+            print(line)
             templine = line;
             templine = templine.replace('<CommandInfo Index="','')
             templine = templine.replace('" Function="Dummy_Point" Values="',',')
@@ -43,10 +44,5 @@ def minigantryscript(OpenFile):
         print(Array[0] + ",")
         writefile.write(Array[1] + "\t" + Array[2]+ "\n")
         #writefile.write(Array[0] + "\t" + Array[1] + "\t" + Array[2] + "\t" + Array[3]+ "\n")
-
-
-
-
-
-    
+ 
 main()
