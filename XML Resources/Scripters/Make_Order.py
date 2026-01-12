@@ -11,7 +11,7 @@ import numpy as np
 #Main() Checks to See what type of script you would Like to generate
 def main():
     #OpenFile = input("Open What File: ")
-    OpenFile = 'LD5input.txt';
+    OpenFile = 'XML Resources\Scripters\Input_Dispense.txt';
     #OutputFormat = 'mini';
     minigantryscript(OpenFile);
     
@@ -24,7 +24,10 @@ def minigantryscript(OpenFile):
     z = 0; z2 = 1;
     total = 0; p = 0; u = 0;
     
-    writefile =  open("LD5output.txt", "w");
+    path = os.getcwd();
+    path = path.replace('Scripters','')
+    writeFilePath = path + '\\XML Resources\\Scripters\\' + 'Output.txt'
+    writefile =  open(writeFilePath, "w");
     #writefile.write("----first line----")
 
     for line in flines:
@@ -80,9 +83,10 @@ def minigantryscript(OpenFile):
         
         #
         #print('  <CommandInfo Index="'+ str(z2) + '" Function="Dispense_Dot" Values="' + str((p1xi)) + "," + str((p1yi)) + ","+ "45.24" + ',-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />')
-        yvalue = str(p1yi).replace('\n','')
+        yvalue = float(str(p1yi).replace('\n',''))
         #print(p1yi, yvalue)
-        writefile.write('  <CommandInfo Index="'+ str(z2) + '" Function="Dispense_Dot" Values="' + str((p1xi)) + "," + str((yvalue)) + ", 45.24" + ',-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />\n')
+        writefile.write('  <CommandInfo Index="'+ str(z2) + '" Function="Dispense_Dot" Values="' + f"{p1xi:.2f}" + "," + f"{yvalue:.2f}" + ", 45.24" + ',-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" TempValues="" />\n')
+        print(f"{p1xi:.2f}" + "," + f"{yvalue:.2f}")
         p = p + 1; #z2 = z
         #z2 = z2 + 1;
 
