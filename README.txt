@@ -1,5 +1,10 @@
 #READ THIS DOCUMENT TO SETUP WIREBOND PHOTOS ON THE MINIGANTRY
 
+#About this system:
+  # This project is an Automated Quality Control system for wire bond inspection on the MiniGantry.
+  # It uses a Raspberry Pi, USB microscope, and gantry-mounted imaging setup to capture wirebond photos automatically.
+  # The system is designed to reduce manual inspection effort, improve consistency, and provide repeatable visual quality checks.
+
 #1 Materials: Mini Gantry, Rasberry Pi, Solid State Relay, USB Microscope, Microscope Arm for the Minigantry (3D Printable)(Made in Steel at UCSB), Mouse, Keyboard, Monitor, D-Sub Connector
   # USB MICROSOPE: https://www.amazon.com/dp/B07DQM237K?ref=fed_asin_title
   # Solid State Replay: https://www.amazon.com/dp/B00B888WVC?ref=fed_asin_title
